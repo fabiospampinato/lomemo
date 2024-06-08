@@ -17,19 +17,19 @@ import lomemo from 'lomemo';
 
 // Memoize a function, using the first argument as the key
 
-const memoize = lomemo ( ( a, b ) => a + b );
+const memoized = lomemo ( ( a, b ) => a + b );
 
-memoize ( 1, 2 ); // => 3
-memoize ( 1, 5 ); // => 3
+memoized ( 1, 2 ); // => 3
+memoized ( 1, 5 ); // => 3
 
 // Memoize a function, using a custom function to generate the key
 
 const resolver = ( ...args ) => args.join ( '' );
-const memoize = lomemo ( ( a, b ) => a + b, resolver );
+const memoized = lomemo ( ( a, b ) => a + b, resolver );
 
-memoize ( 1, 2 ); // => 3
-memoize ( 1, 5 ); // => 6
-memoize ( '', '15' ); // => 6
+memoized ( 1, 2 ); // => 3
+memoized ( 1, 5 ); // => 6
+memoized ( '', '15' ); // => 6
 ```
 
 ## License
