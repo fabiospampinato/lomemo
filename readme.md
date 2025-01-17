@@ -7,7 +7,7 @@ Read lodash's [docs](https://lodash.com/docs/4.17.15#memoize) for more info.
 ## Install
 
 ```sh
-npm install --save lomemo
+npm install lomemo
 ```
 
 ## Usage
@@ -15,14 +15,14 @@ npm install --save lomemo
 ```ts
 import lomemo from 'lomemo';
 
-// Memoize a function, using the first argument as the key
+// Let's memoize a function, using the first argument as the key
 
 const memoized = lomemo ( ( a, b ) => a + b );
 
 memoized ( 1, 2 ); // => 3
 memoized ( 1, 5 ); // => 3
 
-// Memoize a function, using a custom function to generate the key
+// Let's memoize a function, using a custom function to generate the key
 
 const resolver = ( ...args ) => args.join ( '' );
 const memoized = lomemo ( ( a, b ) => a + b, resolver );
