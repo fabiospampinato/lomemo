@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/lomemo",
   "description": "Lodash's memoize function, but in a much smaller package than lodash.memoize's.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
